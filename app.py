@@ -53,7 +53,7 @@ def generate_video_with_options(video_file, user_prompt, settings, api_key):
     """Generate an enhanced video using Gemini VEO 3 with optional audio & captions."""
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("veo-3")
+        model = genai.GenerativeModel("gemini-2.5-flash")
 
         # Save the uploaded video temporarily
         with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
